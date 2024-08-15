@@ -6,7 +6,7 @@ import numpy as np
 @st.cache
 def load_data():
     # Replace with the path to your dataset
-    return pd.read_parquet('harmful_df.parquet')
+    return pd.read_csv('harmful_df.csv')
 
 df = load_data()
 
