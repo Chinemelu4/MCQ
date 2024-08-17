@@ -10,7 +10,7 @@ def load_data():
 
 df,df2,df3 = load_data()
 
-st.title('MCQ SCENARIO 1&2 Validation')
+st.title('MCQ LLM Response Evaluation')
 
 # User selection
 filter_type = st.radio(
