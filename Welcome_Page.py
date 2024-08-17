@@ -6,7 +6,7 @@ st.set_page_config(
     page_icon="👋",
 )
 
-st.write("# Welcome My MCQ Validation Site! 👋")
+st.write("# MCQ Validation Site! 👋")
 
 st.sidebar.success("Select a Scenario")
 
