@@ -52,7 +52,8 @@ if len(filtered_df) > 30:
 filtered_df = filtered_df[columns_to_keep]
 filtered_df.reset_index(drop=True,inplace=True)
 filtered_df2 = filtered_df.drop(columns=['sample_id'],axis=1)
-st.write(filtered_df2)
+if st.button("View Table"):
+    st.write(filtered_df2)
 
 # Button to download the filtered dataset as a CSV file
 @st.cache
