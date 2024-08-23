@@ -10,7 +10,7 @@ def load_data():
 
 df = load_data()
 
-st.title('MCQ SCENARIO 3 Validation')
+st.title('Harmful & Misleading Response Evaluation')
 #st.write(len(df))
 
 # Filter dataset based on African expertise questions ranked 2, 3, 4, or 5
