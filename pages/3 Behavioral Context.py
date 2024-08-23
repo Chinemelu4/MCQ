@@ -10,7 +10,7 @@ def load_data():
 
 df1,df2,df3 = load_data()
 
-st.title('Counter Factual Validation')
+st.title('Behavioural Factual Evaluation')
 
 def gen_random(df1,df2,df3):
     num =np.random.randint(10000)
