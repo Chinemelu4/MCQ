@@ -10,7 +10,7 @@ def load_data():
 
 df,df2,df3 = load_data()
 
-st.title('African Expertise Validation')
+st.title('African Expertise Evaluation')
 
 # User selection
 # filter_type = st.radio(
