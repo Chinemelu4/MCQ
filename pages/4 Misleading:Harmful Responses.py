@@ -48,6 +48,7 @@ def convert_df_to_csv(df):
     return df.to_csv(index=False).encode('utf-8')
 
 csv = convert_df_to_csv(filtered_df)
+st.write("Please Click the download button to download the questions")
 st.download_button(
     label="Download CSV",
     data=csv,
