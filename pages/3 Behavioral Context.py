@@ -67,6 +67,7 @@ filtered_df = gen_random(df1,df2,df3)
 def convert_df_to_csv(df):
     return df.to_csv(index=False).encode('utf-8')
 
+st.write("Please Click the download button to download the questions")
 csv = convert_df_to_csv(filtered_df)
 st.download_button(
     label="Download CSV",
