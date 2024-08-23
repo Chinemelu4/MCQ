@@ -22,7 +22,9 @@ filtered_df = df[df['specialty'] == selected_specialty]
 
 
 
-    # Randomly select predictions from 3 out of 6 models
+ 
+# Randomly select predictions from 3 out of 6 models
+st.write("Please Click the generate button to generate questions")
 if st.button('Regenerate Questions'):
     models = [
         'model1','model2','model3','model4','model5','model6'
@@ -51,6 +53,7 @@ if st.button('Regenerate Questions'):
 def convert_df_to_csv(df):
     return df.to_csv(index=False).encode('utf-8')
 
+st.write("Please Click the download button to download the questions")
 csv = convert_df_to_csv(filtered_df)
 st.download_button(
     label="Download CSV",
