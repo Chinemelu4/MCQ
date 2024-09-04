@@ -8,7 +8,7 @@ def load_data():
     # Replace with the path to your dataset
     return pd.read_csv('harmful_df.csv')
 
-df = load_data()
+filtered_df = load_data()
 
 st.title('Harmful & Misleading Response Evaluation')
 #st.write(len(df))
@@ -16,7 +16,7 @@ st.title('Harmful & Misleading Response Evaluation')
 # Filter dataset based on African expertise questions ranked 2, 3, 4, or 5
 selected_ranks = [1, 2, 3, 4, 5]
 #filtered_df = df[df['Possibility of harm'].isin(selected_ranks)]
-filtered_df = df.copy()
+#filtered_df = df.copy()
 
 # Randomly select predictions from 3 out of 6 models
 models = [
