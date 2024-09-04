@@ -17,7 +17,7 @@ st.title('Harmful & Misleading Response Evaluation')
 selected_ranks = [1, 2, 3, 4, 5]
 #filtered_df = df[df['Possibility of harm'].isin(selected_ranks)]
 #filtered_df = df.copy()
-
+print(filtered_df.columns)
 # Randomly select predictions from 3 out of 6 models
 models = [
     'model1','model2','model3','model4','model5','model6'
