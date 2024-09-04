@@ -6,9 +6,9 @@ import numpy as np
 @st.cache
 def load_data():
     # Replace with the path to your dataset
-    return pd.read_parquet('special_df.parquet'), pd.read_parquet('afriq_df.parquet'), pd.read_parquet('harmful_df.parquet')
+    return pd.read_csv('special_df.csv')
 
-df,df2,df3 = load_data()
+df = load_data()
 
 st.title('MCQ Specialty Based Evaluation')
 
@@ -34,12 +34,13 @@ if st.button('Regenerate Questions'):
     # Filter columns to only include the selected models' predictions and corresponding 'correct' columns
     model_columns = [f'{model}' for model in selected_models]
     correct_columns = [f'{model}_outputs' for model in selected_models]
-    others = ['question', 'rationale']
+    others = ['question', 'answer', 'rationale']
     columns_to_keep = ['sample_id'] + others + model_columns + correct_columns
 
     # Ensure only 30 questions are displayed
+    num = np.random.randint(1000)
     if len(filtered_df) > 30:
-        filtered_df = filtered_df.sample(n=30, random_state=1)
+        filtered_df = filtered_df.sample(n=30, random_state=num)
 
 
     # Display the filtered DataFrame
