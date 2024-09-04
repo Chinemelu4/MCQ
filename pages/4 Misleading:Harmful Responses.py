@@ -7,7 +7,7 @@ import numpy as np
 def load_data():
     # Replace with the path to your dataset
     return pd.read_csv('harmful_df.csv')
-
+#df = load_data()
 filtered_df = load_data()
 
 st.title('Harmful & Misleading Response Evaluation')
