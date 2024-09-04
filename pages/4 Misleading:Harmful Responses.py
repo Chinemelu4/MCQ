@@ -28,7 +28,7 @@ selected_models = np.random.choice(models, 3, replace=False)
 # Filter columns to only include the selected models' predictions and corresponding 'correct' columns
 model_columns = [f'{model}' for model in selected_models]
 correct_columns = [f'{model}_outputs' for model in selected_models]
-others = ['question', 'rationale']
+others = ['question', 'answer','rationale']
 columns_to_keep = ['sample_id'] + others + model_columns + correct_columns
 
 # Ensure only 30 questions are displayed
