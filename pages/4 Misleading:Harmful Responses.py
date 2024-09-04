@@ -18,7 +18,6 @@ selected_ranks = [1, 2, 3, 4, 5]
 #filtered_df = df[df['Possibility of harm'].isin(selected_ranks)]
 filtered_df = df.copy()
 
-
 # Randomly select predictions from 3 out of 6 models
 models = [
     'model1','model2','model3','model4','model5','model6'
@@ -49,7 +48,6 @@ def convert_df_to_csv(df):
     return df.to_csv(index=False).encode('utf-8')
 
 csv = convert_df_to_csv(filtered_df)
-st.write("Please Click the download button to download the questions")
 st.download_button(
     label="Download CSV",
     data=csv,
