@@ -50,7 +50,7 @@ if st.button('Regenerate Questions'):
     new_cols = ['sample_id', 'question', 'rationale', 'model number', 'model_answer', 'model rationale']  
 
     final2 = final_df[new_cols] 
-    st.dataframe(final2)
+    st.write(final2)
         
 
     # # Filter columns to only include the selected models' predictions and corresponding 'correct' columns
